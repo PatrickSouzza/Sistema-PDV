@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+body{
+    margin: 0;
+    font-family: "Audiowide", sans-serif;
+}
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background:#0c1016;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login{
+    width:  50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.left-login > h1{
+    color: rgb(125, 88, 168);
+    font-weight: 100;
+}
+.left-login-img{
+    width: 35vw;
+}
+.right-login{
+    width:  50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulario{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #0c101691;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px rgb(125, 88, 168);
+}
+.formulario > h1{
+    color: rgb(125, 88, 168);
+    font-weight: 100;
+    margin: 0;
+}
+.textfield{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input{
+    width:  100%;
+    border: 1px solid;
+    border-color: rgb(125, 88, 168);
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #21252a;
+    color: rgb(125, 88, 168);
+    
+    align-items: flex-start;
+    outline: none;
+    box-sizing: border-box;
+}
+.textfield >label{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.textfield >input::placeholder{
+    color: #7c7c7c;
+}
+
+.btn-login{
+    background: rgb(125, 88, 168);
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px black;
+
+}

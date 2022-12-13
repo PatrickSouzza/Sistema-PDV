@@ -78,6 +78,7 @@ let chart = new Chart(ctx, {
         }
     }
 });
+
 let ctx2 = document.getElementById('chart2').getContext('2d');
 
     let chart2 = new Chart(ctx2, {
@@ -236,77 +237,78 @@ let ctx2 = document.getElementById('chart2').getContext('2d');
         },
     }
 });
+
 let ctx4 = document.getElementById('chart4').getContext('2d');
 
-    let chart4 = new Chart(ctx4, {
-    
-        type: 'bar',
-    
-        data: {
-            labels: ["Segunda","Terça","Quarta","Quinta","Sexta","Sábado","Domingo" ],
-            datasets: [{
-                
-                backgroundColor:[
-                    'rgba(106, 90, 205, 1)',
-                    'rgba(255, 0, 0, 1 )',
-                    'rgba(175, 238, 238, 1)',
-                    'rgba(0, 0, 128, 1)',
-                    'rgba(0, 206, 209, 1 )',
-                    'rgba(255, 20, 147, 1 )',
-                    
-                ],
-                borderColor: [
-                    'rgba(41, 128, 185,1.0)',
-                ],
-                data: [70,75,60,80,100,95,30],
-            
-            },
-            
-        ]
+let chart4 = new Chart(ctx4, {
 
+    type: 'bar',
+
+    data: {
+        labels: ["Segunda","Terça","Quarta","Quinta","Sexta","Sábado","Domingo" ],
+        datasets: [{
+            
+            backgroundColor:[
+                'rgba(106, 90, 205, 1)',
+                'rgba(255, 0, 0, 1 )',
+                'rgba(175, 238, 238, 1)',
+                'rgba(0, 0, 128, 1)',
+                'rgba(0, 206, 209, 1 )',
+                'rgba(255, 20, 147, 1 )',
+                
+            ],
+            borderColor: [
+                'rgba(41, 128, 185,1.0)',
+            ],
+            data: [70,75,60,80,100,95,30],
+        
         },
-        options: {
-            animation : {
-                duration : 2000,
-                easing : 'easeOutBounce'
-            },
-            layout : {
-                padding : {
-                    left : 20,
-                    right : 20,
-                    top : 20,
-                    bottom : 20
-                }
-            },
-            legend : {
-                display : false,
-                position : 'bottom',
-            },
-            title : {
-                display : true,
-                text : '% da Meta diária',
-                fontSize : 20
-            },
-            tooltips : {
-                enabled : true,
-                intersect : true,
-                backgroundColor : 'rgba(238, 130, 238, 1)'
-            },
-            scales : {
-                xAxes : [{
-                    gridLines : {
-                        display : false,
-                        drawBorder : false
-                    },
-                    position : 'bottom'
-                }],
-                yAxes : [{
-    
-                    gridLines : {
-                        display : false,
-                        drawBorder : false
-                    }
-                }]
+        
+    ]
+
+    },
+    options: {
+        animation : {
+            duration : 2000,
+            easing : 'easeOutBounce'
+        },
+        layout : {
+            padding : {
+                left : 20,
+                right : 20,
+                top : 20,
+                bottom : 20
             }
+        },
+        legend : {
+            display : false,
+            position : 'bottom',
+        },
+        title : {
+            display : true,
+            text : '% da Meta diária',
+            fontSize : 20
+        },
+        tooltips : {
+            enabled : true,
+            intersect : true,
+            backgroundColor : 'rgba(238, 130, 238, 1)'
+        },
+        scales : {
+            xAxes : [{
+                gridLines : {
+                    display : false,
+                    drawBorder : false
+                },
+                position : 'bottom'
+            }],
+            yAxes : [{
+
+                gridLines : {
+                    display : false,
+                    drawBorder : false
+                }
+            }]
         }
-    });
+    }
+});

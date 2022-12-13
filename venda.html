@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/resources/style.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <title>PDV</title>
 </head>
@@ -12,24 +12,21 @@
    
     <div class="main-container">
         <div class="nav-bar">
-            <img src="/resources/perfil-de-usuario.png" alt="perfil">
-            <label>Usuario Logado</label>
-            <img src="/resources/estrela.png" alt="estrela">
-            <label>Mais vendidos</label>
-            <img src="/resources/grafico-de-bolo.png" alt="grafico">
-            <label>Estatisticas</label>
+
+            <div class="btn-nav" onclick="jsRelatorios()">
+                <img src="/resources/grafico-de-bolo.png" alt="grafico">
+                <label class="btn-nav">Estatisticas</label>
+            </div>
+
+            <div class="btn-nav" onclick="jsLogin()">
+                <img src="/resources/logoff.png" alt="logoff">
+                <label class="btn-nav">Logout</label>
+            </div>
+
         </div>
-        <div class="carrinho">
-            <div class="title">
-               Carrinho
-            </div>
-            <div class="itens">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-            </div>
+        <div class="carrinho" id="carrinho">
+            <H1>Carrinho</H1>
+            <div id="produtos"></div>         
         </div>
         <div class="busca-total">
             <div class="busca">
@@ -42,10 +39,53 @@
             </div>
             <div class="card-total">
                 <h1>Total :</h1>
-                <span class="total"> 0,00</span>
+                <span class="total"> R$ 169,99</span>
             </div>
         </div>
     </div>
+    <script>
+        const itens = [
+{
+    id: 0,
+    nome: "Camiseta G",
+    img: "/resources/camiseta.png",
+    valor:"49,99",
+    quantidade: 0
+},
+{
+    id: 1,
+    nome: "Boné",
+    img: "/resources/bone.png",
+    valor:"35,00",
+    quantidade: 0
+},
+{
+    id: 2,
+    nome: "Calça Jeans",
+    img: "/resources/calca.png",
+    valor:"85,00",
+    quantidade: 0
+},
+]
+
+initloja = () => {
+    var containerProdutos = document.getElementById("produtos");
+    itens.map((val)=>{
+        console.log(val.nome);
+        containerProdutos.innerHTML +=`
+        
+        <div class="produto-unico">
+            <img class="produto-img"src="`+val.img+`" />
+            <p class="produto-font">`+val.nome+`</p>
+            <p class="produto-font">`+val.valor+`</p>
+        </div>
+        `;
+       
+    })
+}
+initloja()
+    </script>
+    <script src="./js/config.js"></script>
     
 </body>
 </html>
